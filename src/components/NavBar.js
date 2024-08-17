@@ -1,7 +1,8 @@
-import { NavLink} from "react-router-dom";
+// NavBar.js
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar() {
+function NavBar({ logout }) { // Accept logout function as a prop
 
   return (
     <nav>
@@ -17,6 +18,10 @@ function NavBar() {
       >
         About
       </NavLink>
+      {/* Add the logout button */}
+      <button onClick={logout} className="nav-link">
+        Logout
+      </button>
     </nav>
   );
 }
